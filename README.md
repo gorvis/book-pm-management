@@ -14,7 +14,7 @@ Practical Product Management in the Age of AI & Post-Truth — a textbook + play
 ## How to use this repo (students / readers)
 You’ll use GitHub to keep your work organized and reviewable: artifacts, prompts, decision logs, and optional code changes.
 
-### Start here (absolute beginner friendly)
+### Start here
 
 **Step 1 — Open a terminal**
 - **Mac:** open **Applications → Utilities → Terminal**
