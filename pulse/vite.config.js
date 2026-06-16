@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/book-pm-management/',
+  base: '/book-pm-management/pulse/',
+  build: {
+    outDir: 'dist/pulse',
+  },
 });
