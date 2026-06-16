@@ -5,7 +5,7 @@
 
 **Pulse** is a personal health tracker where you manually log four things — **food, steps, water, and sleep** — as often as you like, edit or delete any entry, and see your trends over time in charts. It is the running case product for the textbook: a deliberately minimal app that students clone, study, and extend.
 
-🔗 **Live demo:** [gorvis.github.io/book-pm-management](https://gorvis.github.io/book-pm-management/)
+🔗 **Live demo:** https://gorvis.github.io/book-pm-management/pulse
 
 ---
 
