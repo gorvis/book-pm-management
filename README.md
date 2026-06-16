@@ -13,11 +13,10 @@
 
 | Folder | Contents |
 |--------|----------|
-| **`pulse/`** | The Pulse web app (React + Vite) |
+| **`pulse/`** | The Pulse web app  |
 | **`artifacts/`** | Templates & examples — the "product file" deliverables |
-| **`prompts/`** | Saved prompts used in the book (as versioned files) |
+| **`prompts/`** | Saved prompts used in the book |
 | **`docs/`** | Setup notes, repo rules, and book-aligned documentation |
-| **`readers/`** | Reader work (artifacts/prompts) organized by GitHub handle |
 
 ## Quick start
 
@@ -36,9 +35,25 @@ npm run dev
 
 Open the URL shown in your terminal (usually `http://localhost:5173/book-pm-management/`).
 
+### Preview the production build
+
+```bash
+npm run build
+npm run preview
+```
+
 ## How data works
 
 Pulse stores everything in your browser's `localStorage` — there is no server, no database, and no account. Your data stays on your device. On first launch, Pulse loads two weeks of sample data so the charts look alive right away. You can clear it anytime from Settings.
+
+## Deployment
+
+This repository deploys the `pulse` app to GitHub Pages automatically on every push to `main`.
+
+- Build source: `pulse/`
+- Publish output: `pulse/dist`
+- Workflow: `.github/workflows/deploy.yml`
+- Live site: `https://gorvis.github.io/book-pm-management/`
 
 ## Tech stack
 
