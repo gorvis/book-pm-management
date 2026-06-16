@@ -1,32 +1,62 @@
-# book-pm-management
+# Pulse — Personal Health Tracker
 
-Practical Product Management in the Age of AI & Post-Truth — a textbook + playbook with a running case product (**Pulse**) and a complete set of portfolio-ready artifacts, prompts, and a working prototype (React Native).
+> **Practical Product Management in the Age of AI & Post-Truth**
+> A textbook & playbook by Guinevere Orvis
 
-**Author:** Guinevere Orvis
+**Pulse** is a personal health tracker where you manually log four things — **food, steps, water, and sleep** — as often as you like, edit or delete any entry, and see your trends over time in charts. It is the running case product for the textbook: a deliberately minimal app that students clone, study, and extend.
 
-## What’s in this repo
-- **`book-pm-management-app/`** — Pulse (React Native / Expo) prototype
-- **`book-pm-management-artifacts/`** — templates + examples (the “product file” deliverables)
-- **`book-pm-management-prompts/`** — saved prompts used in the book (as versioned files)
-- **`book-pm-management-docs/`** — setup notes, repo rules, and book-aligned documentation
-- **`book-pm-management-readers/`** — reader work (artifacts/prompts) organized by GitHub handle
+🔗 **Live demo:** [gorvis.github.io/book-pm-management](https://gorvis.github.io/book-pm-management/)
 
-## How to use this repo (students / readers)
-You’ll use GitHub to keep your work organized and reviewable: artifacts, prompts, decision logs, and optional code changes.
+---
 
-### Start here
+## What's in this repo
 
-**Step 1 — Open a terminal**
-- **Mac:** open **Applications → Utilities → Terminal**
-- **Windows:** open **Start → Windows Terminal** (or **PowerShell**)
+| Folder | Contents |
+|--------|----------|
+| **`pulse/`** | The Pulse web app (React + Vite) |
+| **`artifacts/`** | Templates & examples — the "product file" deliverables |
+| **`prompts/`** | Saved prompts used in the book (as versioned files) |
+| **`docs/`** | Setup notes, repo rules, and book-aligned documentation |
+| **`readers/`** | Reader work (artifacts/prompts) organized by GitHub handle |
 
-**Step 2 — Install the basics (one-time setup)**
-- Install **Git**
-- Install **Node.js (LTS)**
+## Quick start
 
-**Step 3 — Download this repo**
-Copy/paste these commands into your terminal:
+### Prerequisites
+- **Git** — [install guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- **Node.js (LTS)** — [download](https://nodejs.org/)
+
+### Run Pulse locally
 
 ```bash
 git clone https://github.com/gorvis/book-pm-management.git
-cd book-pm-management
+cd book-pm-management/pulse
+npm install
+npm run dev
+```
+
+Open the URL shown in your terminal (usually `http://localhost:5173/book-pm-management/`).
+
+## How data works
+
+Pulse stores everything in your browser's `localStorage` — there is no server, no database, and no account. Your data stays on your device. On first launch, Pulse loads two weeks of sample data so the charts look alive right away. You can clear it anytime from Settings.
+
+## Tech stack
+
+- **React + Vite** — fast dev server and static build
+- **Material UI (MUI)** — component library and dark theme
+- **Recharts** — chart library for trend visualizations
+- **localStorage** — all data persistence
+
+## Ideas to improve Pulse
+
+Pulse is intentionally minimal. Here are starting points for extending it — each one maps to concepts in the textbook:
+
+1. **Accounts & sync** — add user authentication and store data in a cloud database so entries follow you across devices.
+2. **Reminders** — send push notifications or email reminders to log at set times.
+3. **Goals & streaks** — let users set daily targets (e.g. 2 L water, 10 000 steps) and track streaks.
+4. **AI coach** — use a language model to analyze trends and offer personalized suggestions.
+5. **Wearable import** — connect to Apple Health, Google Fit, or Fitbit to pull in steps and sleep automatically.
+
+## License
+
+See [LICENSE](./LICENSE).
