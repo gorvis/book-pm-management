@@ -1,34 +1,45 @@
-graph LR
-    %% Class Definitions for Styling
-    classDef milestone fill:#ffffff,stroke:#1d273b,stroke-width:3px,font-weight:bold,shape:stadium;
-    classDef process fill:none,stroke:none,font-weight:bold,color:#1d273b;
-    classDef phase fill:none,stroke:#1d273b,stroke-width:1px,stroke-dasharray: 5 5;
+### Framework 2 — Discovery ↔ Delivery
 
-    %% --- PROBLEM DIAMOND ---
-    subgraph Problem ["<h3>PROBLEM</h3>"]
-        direction LR
-        
-        Challenge([Challenge]) :::milestone
-        
-        %% Discover Phase (Diverge)
-        Challenge -->|DIVERGE| Discover_Top[Discover]:::process
-        Challenge -->|DIVERGE| Discover_Bottom[Understand & Define Loop]:::process
-        
-        Discover_Top --> Definition([Definition]) :::milestone
-        Discover_Bottom --> Definition
-    end
+```mermaid
+flowchart LR
+    D1["DISCOVERY<br>Are we building<br>the right thing?"]
+    D2["DELIVERY<br>Are we building<br>it well?"]
 
-    %% --- SOLUTION DIAMOND ---
-    subgraph Solution ["<h3>SOLUTION</h3>"]
-        direction LR
-        
-        Definition -->|DIVERGE| Develop_Top[Develop]:::process
-        Definition -->|DIVERGE| Develop_Bottom[Ideate, Prototype, Test Loop]:::process
-        
-        Develop_Top -->|CONVERGE| Solution_End([Solution]) :::milestone
-        Develop_Bottom -->|CONVERGE| Solution_End
-    end
+    %% The Infinity Loop Arcs
+    D1 ==>|Validated decision| D2
+    D2 ==>|What we learned| D1
 
-    %% Specific adjustments for text inside the loops
-    style Problem fill:#f8f9fa,stroke:#cbd5e1,stroke-width:1px;
-    style Solution fill:#f8f9fa,stroke:#cbd5e1,stroke-width:1px;
+    %% Invisible alignment constraint to help layout
+    D1 ~~~ D2
+
+    classDef discovery fill:#2D1B4E,stroke:#8B5CF6,color:#E2E8F0,rx:20px,ry:20px;
+    classDef delivery  fill:#1A1A2E,stroke:#8B5CF6,color:#E2E8F0,rx:20px,ry:20px;
+
+    class D1 discovery
+    class D2 delivery
+```
+
+*Figure Discovery ↔ Delivery loop, adapted from Marty Cagan, SVPG.*
+
+---
+
+### Connecting the framework to Pulse
+
+Pulse is considering adding a food logging feature. The team has heard users ask for it, but that's not enough to build on.
+
+```mermaid
+flowchart LR
+    D1["DISCOVERY\nDo users actually\nlog food consistently?\nWill they trust Pulse\nfor nutrition data?"]
+    D2["DELIVERY\nBuild food logging.\nShip to beta users.\nMeasure logging\nfrequency at day 7."]
+
+    D1 -->|"Enough evidence\nto place the bet"| D2
+    D2 -->|"Day 7 retention\nlow — revisit the\nlogging experience"| D1
+
+    classDef discovery fill:#2D1B4E,stroke:#8B5CF6,color:#E2E8F0
+    classDef delivery  fill:#1A1A2E,stroke:#8B5CF6,color:#E2E8F0
+
+    class D1 discovery
+    class D2 delivery
+```
+
+Discovery doesn't stop when delivery starts. The Pulse team ships to beta users and day 7 retention is low — users try it once and don't come back. That result feeds straight back into discovery: is the logging too slow? Too many fields? Wrong mental model of what a food log should feel like? Delivery produced the question. Discovery finds the answer.

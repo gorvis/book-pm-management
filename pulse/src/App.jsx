@@ -121,6 +121,13 @@ export default function App() {
         )}
       </Box>
 
+      <Box component="footer" sx={{ py: 2, px: 3, textAlign: 'center', color: 'text.secondary', borderTop: 1, borderColor: 'divider', fontSize: '0.85rem' }}>
+        Pulse example app for the book Practical Product Management by Guinevere Orvis.{' '}
+        <Box component="a" href="https://github.com/gorvis/book-pm-management/blob/main/LICENSE" target="_blank" rel="noreferrer" sx={{ color: 'inherit', textDecoration: 'underline' }}>
+          Read license.
+        </Box>
+      </Box>
+
       {/* Settings dialog */}
       <Dialog
         open={settingsOpen}

@@ -1,62 +1,54 @@
-### Visualizing the Feedback Loop
+### Visualizing the feedback loop
 
-To avoid building a product nobody wants, we must utilize a tight, iterative cycle. Below is the structured feedback loop designed to help teams move from initial assumptions to validated learning as efficiently as possible.
+To avoid building a product nobody wants, we need a tight, iterative cycle. Below is the feedback loop that moves a team from initial assumptions to validated learning.
 
 ```mermaid
-graph TD
-    %% Define Styles
-    classDef corePhase fill:#1f77b4,stroke:#115588,stroke-width:2px,color:#ffffff,font-weight:bold;
-    classDef artifact fill:#f8f9fa,stroke:#cccccc,stroke-width:1px,color:#333333,font-style:italic;
-    classDef transition fill:none,stroke:none,color:#555555,font-size:11px;
+flowchart TD
+    LEARN["LEARN\nIdeas and hypotheses"]
+    BUILD["BUILD\nMinimum viable product"]
+    MEASURE["MEASURE\nData and metrics"]
 
-    %% Main Nodes
-    LEARN[LEARN <br> Ideas & Hypotheses]:::corePhase
-    BUILD[BUILD <br> Minimum Viable Product]:::corePhase
-    MEASURE[MEASURE <br> Data & Metrics]:::corePhase
+    IDEA["Artifact: Customer insight"]
+    CODE["Artifact: Shipped feature"]
+    DATA["Artifact: User analytics"]
 
-    %% Artifact Nodes
-    IDEA[Artifact: Customer Insight]:::artifact
-    CODE[Artifact: Shipped Code/Feature]:::artifact
-    DATA[Artifact: User Analytics]:::artifact
+    LEARN -->|Formulate hypothesis| IDEA
+    IDEA --> BUILD
+    BUILD -->|Ship| CODE
+    CODE --> MEASURE
+    MEASURE -->|Collect data| DATA
+    DATA -->|Pivot or persevere| LEARN
 
-    %% Connections and Transitions
-    LEARN -->|1. Formulate Hypothesis| IDEA
-    IDEA -->|Transform into| BUILD
-    
-    BUILD -->|2. Ship | CODE
-    CODE -->|Expose to| MEASURE
-    
-    MEASURE -->|3. Collect Quantitative Data| DATA
-    DATA -->|Pivot or Persevere| LEARN
+    classDef core    fill:#2D1B4E,stroke:#8B5CF6,color:#E2E8F0
+    classDef artifact fill:#1A1A2E,stroke:#8B5CF6,color:#E2E8F0,stroke-dasharray:4
 
-    %% Layout Tweak
-    style LEARN margin-bottom:10px
+    class LEARN,BUILD,MEASURE core
+    class IDEA,CODE,DATA artifact
 ```
 
-**Figure X.X:** *The Build-Measure-Learn Feedback Loop. Framework adapted from Eric Ries’s methodology in "The Lean Startup" (Crown Business, 2011). Graphic structured for markdown rendering.*
+*Figure: The Learn → Build → Measure feedback loop, adapted from Eric Ries, The Lean Startup (Crown Business, 2011).*
 
 ---
 
-### Connecting the Framework to the Pulse Case Study
+### Connecting the framework to Pulse
 
-The power of this loop lies in its velocity. The faster you travel through it, the faster your product finds market fit. Map the Pulse app against this framework.
+The power of this loop is velocity. The faster a team moves through it, the faster the product finds what actually works.
+
+Consider an early Pulse scenario: the team believes users want to log water intake to build a hydration habit. That's the hypothesis.
 
 ```mermaid
-graph LR
-    classDef fail fill:#ea9999,stroke:#cc0000,stroke-width:2px,color:#000000;
-    classDef bypass fill:#f3f3f3,stroke:#999999,stroke-width:1px,color:#999999,stroke-dasharray: 5 5;
+flowchart LR
+    LEARN["LEARN\nHypothesis: users want\nto track hydration"]
+    BUILD["BUILD\nShip basic water\nlogging feature"]
+    MEASURE["MEASURE\nAre users logging?\nIs frequency increasing?"]
 
-    B[4 Years in Secrecy: BUILD]:::fail
-    M[Delayed: MEASURE]:::bypass
-    L[Too Late: LEARN]:::bypass
+    LEARN --> BUILD
+    BUILD --> MEASURE
+    MEASURE -->|Users logging once,\nthen dropping off| LEARN
 
-    B --> M --> L
+    classDef core fill:#2D1B4E,stroke:#8B5CF6,color:#E2E8F0
+
+    class LEARN,BUILD,MEASURE core
 ```
 
-*   **Trapped in the Build Phase:** Amazon spent nearly four years working in complete secrecy. Instead of building a small slice of value, measuring reactions, and learning, they kept building custom hardware, advanced math algorithms, and complex 3D perspective arrays in a vacuum.
-*   **The Cost of Delayed Measurement:** Because they did not ship a Minimum Viable Product (MVP), they collected zero customer data for forty-eight months. 
-*   **The Catastrophic Learning Stage:** By the time Amazon finally entered the "Learn" phase on launch day, they learned everything all at once at the cost of a $170 million write-down. 
-
-***
-
-Pulse
+The team ships the minimum version, measures logging frequency, and learns that users log once and stop. Most teams would call that a failed feature. A PM running this loop calls it the next hypothesis.
