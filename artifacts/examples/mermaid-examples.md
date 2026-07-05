@@ -1,6 +1,9 @@
-### Mermaid Basic Examples
+## Mermaid Basic Examples
+View all Mermaid diagrams at: https://mermaid.ai/open-source/syntax/examples.html
 
-### Pie Chart
+
+
+## Pie Chart
 ```mermaid
 pie title Pulse: User Activity Breakdown (Sample Data)
     "Sleep logging" : 35
@@ -9,7 +12,7 @@ pie title Pulse: User Activity Breakdown (Sample Data)
     "Water logging" : 15
 ```
 
-### Flow Chart
+## Flow Chart
 ```mermaid
 flowchart TD
     title["Flowchart — User logging a meal"]
@@ -20,20 +23,8 @@ flowchart TD
     D -->|No| F["Discard entry"]
 ```
 
-### Sequence Diagram
-```mermaid
-sequenceDiagram
-    title Sequence Diagram — App saving a log entry
-    actor User
-    participant App as Pulse App
-    participant Storage as Local Storage
-    User->>App: Taps "Save Entry"
-    App->>Storage: Write log entry
-    Storage-->>App: Confirm saved
-    App-->>User: Show success message
-```
 
-### Gantt Chart
+## Gantt Chart
 ```mermaid
 gantt
     title Gantt Chart — Pulse Sprint 1
@@ -48,26 +39,8 @@ gantt
         Beta testing        :c1, after b2, 5d
 ```
 
-### ER Diagram
-```mermaid
-erDiagram
-    title ER Diagram — Pulse data model
-    USER ||--o{ LOG_ENTRY : creates
-    LOG_ENTRY ||--|| FOOD : contains
-    LOG_ENTRY ||--|| SLEEP : contains
-    LOG_ENTRY ||--|| STEPS : contains
-    LOG_ENTRY ||--|| WATER : contains
-    USER {
-        string username
-        string goal
-    }
-    LOG_ENTRY {
-        date entry_date
-        string type
-    }
-```
 
-### XY Chart
+## XY Chart
 ```mermaid
 xychart-beta
     title "XY Chart — Pulse Steps This Week"
@@ -76,7 +49,7 @@ xychart-beta
     bar [4200, 7800, 6100, 9300, 5500, 11200, 3800]
 ```
 
-### Org Chart
+## Org Chart
 ```mermaid
 flowchart TD
     title["Org Chart — Pulse product team"]

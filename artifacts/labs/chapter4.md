@@ -79,20 +79,20 @@ Pick the item you'd build first. In two to three sentences, argue why, using the
 
 ## Part 4 — MoSCoW scope
 
-Take your backlog and scope a single release. Tag each item. Keep the Must list short and put at least one item in Won't, with a sentence on why it's deferred rather than cut.
+Take your backlog and scope a single release. Tag each item. Keep the Must list short and put at least one item in Won't, with a sentence on if it's deferred or cut.
 
 ```mermaid
 block-beta
     columns 1
-    Must["<b>MUST</b><br>The release fails without it"]
-    Should["<b>SHOULD</b><br>Important, but survives without it"]
-    Could["<b>COULD</b><br>Nice to have if time allows"]
-    Wont["<b>WON'T (this time)</b><br>Explicitly out of scope, deferred not forgotten"]
+    Must["<b style='color:#FFFFFF'>MUST</b><br><span style='color:#FFFFFF'>The release fails without it</span>"]
+    Should["<b style='color:#FFFFFF'>SHOULD</b><br><span style='color:#FFFFFF'>Important, but survives without it</span>"]
+    Could["<b style='color:#FFFFFF'>COULD</b><br><span style='color:#FFFFFF'>Nice to have if time allows</span>"]
+    Wont["<b style='color:#FFFFFF'>WON'T (this time)</b><br><span style='color:#FFFFFF'>Explicitly out of scope, deferred not forgotten</span>"]
 
     style Must fill:#8B5CF6,stroke:#6D28D9,color:#FFFFFF
-    style Should fill:#4C1D95,stroke:#6D28D9,color:#F5F3FF
-    style Could fill:#2D1B4E,stroke:#8B5CF6,color:#E2E8F0
-    style Wont fill:#1A1A2E,stroke:#8B5CF6,color:#E2E8F0
+    style Should fill:#4C1D95,stroke:#6D28D9,color:#FFFFFF
+    style Could fill:#2D1B4E,stroke:#8B5CF6,color:#FFFFFF
+    style Wont fill:#1A1A2E,stroke:#8B5CF6,color:#FFFFFF
 ```
 
 - **Must:**

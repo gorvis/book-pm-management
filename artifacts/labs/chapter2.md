@@ -8,7 +8,7 @@ A one-page Pulse strategy brief: a completed Product Vision Board, a segmentatio
 
 ## Part 1 — Product Vision Board
 
-Fill in all five areas for Pulse. Use the Pulse mission and vision from Chapter 1 as your starting point, but make the board your own, your target group, your read on the needs, your product box.
+Fill in all five areas for Pulse. You created a mission and vision in Chapter 1, use it as your starting point, refine it if you need and fill in the boxes aligned to it.
 
 ```mermaid
 block-beta

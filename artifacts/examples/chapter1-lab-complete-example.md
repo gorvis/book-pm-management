@@ -1,4 +1,4 @@
-# Chapter Lab — Foundations (completed example)
+# Chapter 1 Lab — Foundations (completed example)
 
 > This is a completed example for reference. Do not copy this for your submission — your lab should reflect your own decision and reasoning.
 

@@ -1,0 +1,4 @@
+competitor_id,competitor_name,category,monthly_price_usd,star_rating,downloads_est,track_water,one_tap_logging,smartwatch_support,zero_setup_onboarding,smart_reminders,ai_coach
+1,Pulse,habit_tracker,,,N/A; not yet in market,True,False,False,True,False,False
+2,Competitor 1 (fitness-focused),fitness_tracker,7.99,3.5,100k+,True,False,False,False,True,True
+3,Competitor 2 (premium/AI-forward),wellness_platform,29.99,4.0,1M+,True,True,True,False,True,True

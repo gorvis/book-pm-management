@@ -1,0 +1,5 @@
+feature_id,feature_name,reach,impact,confidence,effort,moscow_status,lifecycle_stage,rice_score
+1,Weekly Summary,9,3,90,1,Must,introduction,24.3
+2,Daily Reminders,8,2,80,1,Should,not_yet_built,12.8
+3,Personal Goals,5,2,60,3,Could,not_yet_built,2.0
+4,AI Coach,6,3,30,8,Won't (this time),not_yet_built,0.68

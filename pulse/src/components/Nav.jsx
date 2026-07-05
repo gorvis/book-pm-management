@@ -9,6 +9,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import HistoryIcon from '@mui/icons-material/History';
+import InsightsIcon from '@mui/icons-material/Insights';
 import PulseLine from './PulseLine';
 
 /**
@@ -66,6 +67,7 @@ export default function Nav({ view, onChangeView }) {
             <Tab icon={<DashboardIcon />} iconPosition="start" label="Dashboard" value={0} id="nav-dashboard" />
             <Tab icon={<AddCircleOutlineIcon />} iconPosition="start" label="Log" value={1} id="nav-log" />
             <Tab icon={<HistoryIcon />} iconPosition="start" label="History" value={2} id="nav-history" />
+            <Tab icon={<InsightsIcon />} iconPosition="start" label="Summary" value={3} id="nav-summary" />
           </Tabs>
         )}
       </Box>
@@ -87,6 +89,7 @@ export default function Nav({ view, onChangeView }) {
           <BottomNavigationAction label="Dashboard" icon={<DashboardIcon />} id="nav-mobile-dashboard" />
           <BottomNavigationAction label="Log" icon={<AddCircleOutlineIcon />} id="nav-mobile-log" />
           <BottomNavigationAction label="History" icon={<HistoryIcon />} id="nav-mobile-history" />
+          <BottomNavigationAction label="Summary" icon={<InsightsIcon />} id="nav-mobile-summary" />
         </BottomNavigation>
       )}
     </>

@@ -4,13 +4,13 @@ The RICE score combines four inputs into a single number. The first three multip
 
 RICE stands for:
 
-R = Reach
+**R** = Reach
 
-I = Impact
+**I** = Impact
 
-C = Confidence
+**C** = Confidence
 
-E = Effort
+**E** = Effort
 
 **RICE FORMULA**: R × I × C ÷ E
 

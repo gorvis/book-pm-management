@@ -1,0 +1,2 @@
+Pulse is an educational sample app with no backend, no database, and no user accounts. All data lives in the browser's local storage and never leaves the user's device. There is no sensitive data collected or stored.
+If you find a security issue in this repository (for example, in the sample code or deployment workflow), please open a GitHub issue. This is a teaching project without a formal disclosure process or bug bounty, but reports are welcome.

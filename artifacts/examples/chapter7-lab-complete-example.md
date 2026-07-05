@@ -42,10 +42,14 @@ radar-beta
 
 ## Part 3 — Cross-functional launch plan
 
-- **Communications:** Marketing. Ready means the in-app note introducing the summary to the 10% cohort is written and scheduled.
-- **Support:** Support lead. Ready means the team knows the summary is rolling out and has a short FAQ for likely questions.
-- **Monitoring:** Engineering. Ready means the return-rate metric and the message guardrails are instrumented and watched in production from day one.
-- **Go/no-go call:** Product Management. Ready means the metric, expansion criteria, and rollback trigger are all written down and agreed before the flag is switched on.
+| Area | Define ready |
+|---|---|
+| Communications | In-app communication introduces the summary to the cohort |
+| Support | Ready to field confusion or complaints; has been trained on the feature and has talking-points for user tickets that come in |
+| Engineering | Fully tested feature, will release and monitor AI call use |
+| Go/no-go call | Product manager has call and is watching return-rate metric |
+
+---
 
 ---
 

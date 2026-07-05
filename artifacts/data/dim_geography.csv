@@ -1,0 +1,9 @@
+geography_id,country,region,city,timezone
+1,Canada,Ontario,Toronto,America/Toronto
+2,Canada,British Columbia,Vancouver,America/Vancouver
+3,United States,New York,New York City,America/New_York
+4,United States,California,Los Angeles,America/Los_Angeles
+5,United States,Texas,Austin,America/Chicago
+6,United Kingdom,England,London,Europe/London
+7,Australia,New South Wales,Sydney,Australia/Sydney
+8,Canada,Quebec,Montreal,America/Toronto

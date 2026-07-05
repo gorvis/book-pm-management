@@ -2,7 +2,7 @@
 
 ## What you'll build
 
-A Pulse discovery brief grounded in a real conversation: an impact map, a real user interview you conduct, a competitive scan, a testable hypothesis with its riskiest assumption named, and an experiment.
+A _Pulse_ discovery brief including an impact map, a human interview you conduct, a competitive scan, a testable hypothesis with its riskiest assumption named, and an experiment.
 
 ---
 
@@ -124,7 +124,7 @@ Use an AI tool to either generate additional interview questions or to challenge
 ## Acceptance criteria
 
 - [ ] The impact map starts from a measurable goal, not a feature
-- [ ] A real interview was conducted, with five planned questions and three captured quotes
+- [ ] A real interview was conducted, with five planned questions and 1-3 captured quotes
 - [ ] The competitive scan covers two real products with a specific insight about the problem
 - [ ] At least one hypothesis is written in the "we believe… if…" form, informed by the interview
 - [ ] The riskiest assumption is named, with a matching experiment to test it

@@ -1,0 +1,121 @@
+demographic_id,age_bracket,gender,income_bracket
+1,18-24,Woman,Under $40k
+2,18-24,Woman,$40k-$80k
+3,18-24,Woman,$80k-$120k
+4,18-24,Woman,$120k+
+5,18-24,Woman,Prefer not to say
+6,18-24,Man,Under $40k
+7,18-24,Man,$40k-$80k
+8,18-24,Man,$80k-$120k
+9,18-24,Man,$120k+
+10,18-24,Man,Prefer not to say
+11,18-24,Non-binary,Under $40k
+12,18-24,Non-binary,$40k-$80k
+13,18-24,Non-binary,$80k-$120k
+14,18-24,Non-binary,$120k+
+15,18-24,Non-binary,Prefer not to say
+16,18-24,Prefer not to say,Under $40k
+17,18-24,Prefer not to say,$40k-$80k
+18,18-24,Prefer not to say,$80k-$120k
+19,18-24,Prefer not to say,$120k+
+20,18-24,Prefer not to say,Prefer not to say
+21,25-34,Woman,Under $40k
+22,25-34,Woman,$40k-$80k
+23,25-34,Woman,$80k-$120k
+24,25-34,Woman,$120k+
+25,25-34,Woman,Prefer not to say
+26,25-34,Man,Under $40k
+27,25-34,Man,$40k-$80k
+28,25-34,Man,$80k-$120k
+29,25-34,Man,$120k+
+30,25-34,Man,Prefer not to say
+31,25-34,Non-binary,Under $40k
+32,25-34,Non-binary,$40k-$80k
+33,25-34,Non-binary,$80k-$120k
+34,25-34,Non-binary,$120k+
+35,25-34,Non-binary,Prefer not to say
+36,25-34,Prefer not to say,Under $40k
+37,25-34,Prefer not to say,$40k-$80k
+38,25-34,Prefer not to say,$80k-$120k
+39,25-34,Prefer not to say,$120k+
+40,25-34,Prefer not to say,Prefer not to say
+41,35-44,Woman,Under $40k
+42,35-44,Woman,$40k-$80k
+43,35-44,Woman,$80k-$120k
+44,35-44,Woman,$120k+
+45,35-44,Woman,Prefer not to say
+46,35-44,Man,Under $40k
+47,35-44,Man,$40k-$80k
+48,35-44,Man,$80k-$120k
+49,35-44,Man,$120k+
+50,35-44,Man,Prefer not to say
+51,35-44,Non-binary,Under $40k
+52,35-44,Non-binary,$40k-$80k
+53,35-44,Non-binary,$80k-$120k
+54,35-44,Non-binary,$120k+
+55,35-44,Non-binary,Prefer not to say
+56,35-44,Prefer not to say,Under $40k
+57,35-44,Prefer not to say,$40k-$80k
+58,35-44,Prefer not to say,$80k-$120k
+59,35-44,Prefer not to say,$120k+
+60,35-44,Prefer not to say,Prefer not to say
+61,45-54,Woman,Under $40k
+62,45-54,Woman,$40k-$80k
+63,45-54,Woman,$80k-$120k
+64,45-54,Woman,$120k+
+65,45-54,Woman,Prefer not to say
+66,45-54,Man,Under $40k
+67,45-54,Man,$40k-$80k
+68,45-54,Man,$80k-$120k
+69,45-54,Man,$120k+
+70,45-54,Man,Prefer not to say
+71,45-54,Non-binary,Under $40k
+72,45-54,Non-binary,$40k-$80k
+73,45-54,Non-binary,$80k-$120k
+74,45-54,Non-binary,$120k+
+75,45-54,Non-binary,Prefer not to say
+76,45-54,Prefer not to say,Under $40k
+77,45-54,Prefer not to say,$40k-$80k
+78,45-54,Prefer not to say,$80k-$120k
+79,45-54,Prefer not to say,$120k+
+80,45-54,Prefer not to say,Prefer not to say
+81,55-64,Woman,Under $40k
+82,55-64,Woman,$40k-$80k
+83,55-64,Woman,$80k-$120k
+84,55-64,Woman,$120k+
+85,55-64,Woman,Prefer not to say
+86,55-64,Man,Under $40k
+87,55-64,Man,$40k-$80k
+88,55-64,Man,$80k-$120k
+89,55-64,Man,$120k+
+90,55-64,Man,Prefer not to say
+91,55-64,Non-binary,Under $40k
+92,55-64,Non-binary,$40k-$80k
+93,55-64,Non-binary,$80k-$120k
+94,55-64,Non-binary,$120k+
+95,55-64,Non-binary,Prefer not to say
+96,55-64,Prefer not to say,Under $40k
+97,55-64,Prefer not to say,$40k-$80k
+98,55-64,Prefer not to say,$80k-$120k
+99,55-64,Prefer not to say,$120k+
+100,55-64,Prefer not to say,Prefer not to say
+101,65+,Woman,Under $40k
+102,65+,Woman,$40k-$80k
+103,65+,Woman,$80k-$120k
+104,65+,Woman,$120k+
+105,65+,Woman,Prefer not to say
+106,65+,Man,Under $40k
+107,65+,Man,$40k-$80k
+108,65+,Man,$80k-$120k
+109,65+,Man,$120k+
+110,65+,Man,Prefer not to say
+111,65+,Non-binary,Under $40k
+112,65+,Non-binary,$40k-$80k
+113,65+,Non-binary,$80k-$120k
+114,65+,Non-binary,$120k+
+115,65+,Non-binary,Prefer not to say
+116,65+,Prefer not to say,Under $40k
+117,65+,Prefer not to say,$40k-$80k
+118,65+,Prefer not to say,$80k-$120k
+119,65+,Prefer not to say,$120k+
+120,65+,Prefer not to say,Prefer not to say

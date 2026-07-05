@@ -52,11 +52,14 @@ If you chose a soft launch (and for anything with AI, you probably should), defi
 
 Name the owners for your launch, and for each, write one line on what "ready" means for them before launch day. Name the grops you'd choose. Some options:
 
-- **Edit this list to reflect the groups you recommend be a part of your launch:**
-- **Communications:**
-- **Support:**
-- **Monitoring:**
-- **Go/no-go call:**
+**Edit this list to reflect the groups you recommend be a part of your launch:**
+
+| Area | Define ready |
+|---|---|
+| Communications | Messaging is drafted, reviewed and scheduled to go out with the launch |
+| Support | Support knows what's shipping and has an FAQ ready for questions from users |
+| Monitoring | Dashboards and alerts are live and pre-release data is flowing in |
+| Go/no-go call | One specific person has visibility into all areas and authority to green light or delay |
 
 ---
 

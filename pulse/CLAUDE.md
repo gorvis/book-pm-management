@@ -4,23 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-This is an **educational repository** for the textbook *Practical Product Management in the Age of AI & Post-Truth* by Guinevere Orvis. It is **not a commercial product**. The running case study is **Pulse**, a deliberately minimal personal health tracker that students clone, study, and extend as they work through the book.
+This is an **educational repository** for the textbook *Practical Product Management in the Age of AI* by Guinevere Orvis. It is **not a commercial product**. The running case study is **Pulse**, a deliberately minimal personal health tracker that students clone, study, and extend as they work through the book.
 
-Students contribute to this repo. Prefer clarity and simplicity over cleverness — code here is meant to be read and learned from. Keep changes small and well-scoped, and preserve Pulse's intentionally minimal surface area unless a change explicitly calls for more.
+Readers and students fork this repo to their own GitHub account and work there. 
 
 ## Repository layout
 
-This is a single repo with the app alongside book materials. Most code work happens in `pulse/`.
+This is a single repo with an example app alongside book materials. Folder structure:
 
 | Folder | Contents |
 |--------|----------|
 | `pulse/` | **The Pulse web app** (React + Vite). All app development happens here. |
 | `artifacts/` | Product-file templates & examples (the book's deliverables) |
+| `artifacts/examples/` | Completed reference examples (PRDs, labs, diagrams) |
+| `artifacts/labs/` | Blank lab templates, one per chapter |
+| `artifacts/data/` | Sample datasets (e.g. `1week.md`, `2week.md`) for lab prototyping, standing in for real backend data |
 | `prompts/` | Versioned prompt files used in the book |
-| `docs/` | Setup notes, repo rules, and architecture decisions |
-| `readers/` | Reader/student work, organized by GitHub handle (`readers/<handle>/`) |
 
-> Note: `book-pm-management-app/src/` is an empty placeholder — it is **not** the app. The app is `pulse/`.
+
 
 ## Commands
 
@@ -29,7 +30,7 @@ All app commands run from the `pulse/` directory:
 ```bash
 cd pulse
 npm install        # install dependencies
-npm run dev        # Vite dev server — http://localhost:5173/book-pm-management/
+npm run dev        # Vite dev server — http://localhost:5173/pulse/
 npm run build      # production build to pulse/dist/
 npm run preview    # serve the production build locally
 ```
@@ -40,7 +41,7 @@ There is currently **no test runner and no linter configured**. Don't claim test
 
 `pulse/` is built and deployed to GitHub Pages automatically by `.github/workflows/deploy.yml` on every push to `main`. The workflow runs `npm ci` + `npm run build` inside `pulse/` and publishes `pulse/dist`.
 
-Because the app is served from a subpath, `vite.config.js` sets `base: '/book-pm-management/'`. Keep this in mind for any asset paths or links — the dev server and the deployed site both live under `/book-pm-management/`.
+Because the app is served from a subpath, `vite.config.js` sets `base: '/pulse/'`. Keep this in mind for any asset paths or links — the dev server and the deployed site both live under `/pulse/`.
 
 ## Architecture
 
@@ -54,7 +55,7 @@ The app is a small client-only SPA. There is **no backend, no database, and no a
 
 ### Entry data model
 
-Every record (sample or user-created) has the same shape:
+Every record (sample or user-created) has this structure:
 
 ```js
 {
@@ -79,5 +80,4 @@ The four `type` values (food, steps, water, sleep) are the core domain. Any feat
 ## Contributing conventions
 
 - Work happens off `main`; the GitHub Pages deploy triggers on merge to `main`.
-- Student/reader deliverables (artifacts, prompts) go under `readers/<your-github-handle>/`.
 - **Do not add AI/assistant attribution** to commits, PR descriptions, or code comments (no "Generated with…" / "Co-Authored-By" assistant lines).

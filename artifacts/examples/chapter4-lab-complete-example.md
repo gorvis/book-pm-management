@@ -83,15 +83,15 @@ I'd build the weekly summary first, even though the daily reminder has a slightl
 ```mermaid
 block-beta
     columns 1
-    Must["<b>MUST</b><br>Weekly summary"]
-    Should["<b>SHOULD</b><br>Daily reminder"]
-    Could["<b>COULD</b><br>Streak indicator, Personal goals"]
-    Wont["<b>WON'T (this time)</b><br>AI coach"]
+    Must["<b style='color:#FFFFFF'>MUST</b><br><span style='color:#FFFFFF'>Weekly summary</span>"]
+    Should["<b style='color:#FFFFFF'>SHOULD</b><br><span style='color:#FFFFFF'>Daily reminder</span>"]
+    Could["<b style='color:#FFFFFF'>COULD</b><br><span style='color:#FFFFFF'>Streak indicator, Personal goals</span>"]
+    Wont["<b style='color:#FFFFFF'>WON'T (this time)</b><br><span style='color:#FFFFFF'>AI coach</span>"]
 
     style Must fill:#8B5CF6,stroke:#6D28D9,color:#FFFFFF
-    style Should fill:#4C1D95,stroke:#6D28D9,color:#F5F3FF
-    style Could fill:#2D1B4E,stroke:#8B5CF6,color:#E2E8F0
-    style Wont fill:#1A1A2E,stroke:#8B5CF6,color:#E2E8F0
+    style Should fill:#4C1D95,stroke:#6D28D9,color:#FFFFFF
+    style Could fill:#2D1B4E,stroke:#8B5CF6,color:#FFFFFF
+    style Wont fill:#1A1A2E,stroke:#8B5CF6,color:#FFFFFF
 ```
 
 - **Must:** Weekly summary. The release is built around it; without it there's no test of the retention hypothesis.

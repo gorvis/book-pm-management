@@ -15,6 +15,7 @@ import Nav from './components/Nav';
 import Dashboard from './components/Dashboard';
 import LogForm from './components/LogForm';
 import History from './components/History';
+import WeeklySummary from './components/WeeklySummary';
 import useEntries from './hooks/useEntries';
 
 /**
@@ -24,7 +25,7 @@ import useEntries from './hooks/useEntries';
  */
 export default function App() {
   const { entries, add, update, remove, clearAll, loadSampleData } = useEntries();
-  const [view, setView] = useState(0); // 0=Dashboard, 1=Log, 2=History
+  const [view, setView] = useState(0); // 0=Dashboard, 1=Log, 2=History, 3=Summary
   const [editEntry, setEditEntry] = useState(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [confirmClear, setConfirmClear] = useState(false);
@@ -119,6 +120,7 @@ export default function App() {
             onDelete={remove}
           />
         )}
+        {view === 3 && <WeeklySummary />}
       </Box>
 
       <Box component="footer" sx={{ py: 2, px: 3, textAlign: 'center', color: 'text.secondary', borderTop: 1, borderColor: 'divider', fontSize: '0.85rem' }}>
