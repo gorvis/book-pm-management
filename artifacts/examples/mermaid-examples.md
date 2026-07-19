@@ -5,7 +5,7 @@ View all Mermaid diagrams at: https://mermaid.ai/open-source/syntax/examples.htm
 
 ## Pie Chart
 ```mermaid
-pie title Pulse: User Activity Breakdown (Sample Data)
+pie title Pulse: User Activity Breakdown
     "Sleep logging" : 35
     "Food logging" : 28
     "Step tracking" : 22
