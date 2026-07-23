@@ -8,32 +8,33 @@
 
 Feature: the _Pulse_ weekly summary, with its one AI-written message.
 
-I compared all three strategies on the radar first (the comparison chart is in the chapter), then chose soft. The chart below shows the profile of the strategy I landed on, low on reach, promotion, and speed, high on learning and containment.
+I compared all three strategies on the radar first (the comparison chart is in the chapter), then chose minimal. The chart below shows the profile of the strategy I landed on: moderate on reach, promotion, and speed, leaning toward learning and containment.
 
 ```mermaid
 ---
 config:
   themeVariables:
-    cScale0: "#8B9D77"
+    cScale0: "#E0B584"
 ---
 radar-beta
-    title The Weekly Summary: Soft Launch Profile
+    title The Weekly Summary: Minimal Launch Profile
     axis reach["Reach"], promo["Promotion"], speed["Speed"]
     axis learn["Learning"], safety["Containment"]
-    curve soft["Soft launch"]{2, 2, 2, 5, 5}
+    curve minimal["Minimal"]{3, 3, 3, 4, 4}
     max 5
     showLegend true
 ```
 
-**Chosen strategy:** Soft.
+**Chosen strategy:** Minimal.
 
-**Justification.** The summary is our biggest committed bet, and it has one AI-written part that could say the wrong thing, so I want to learn before everyone sees it. The soft shape leans toward Learning and Containment, exactly what I need: a small audience first, room to watch the message behave, and an easy pull-back if it doesn't. I'm trading away the reach and speed of a full launch, but for a feature carrying real risk that's the right trade, I'd rather find a problem on a small group than on the whole user base.
+**Justification.** The summary is our biggest committed bet, and it has one AI-written part that could say the wrong thing, so I want to learn before everyone sees it. The minimal shape leans toward Learning and Containment, exactly what I need: a small audience first, room to watch the message behave, and an easy pull-back if it doesn't. I'm trading away the reach and speed of a full launch, but for a feature carrying real risk that's the right trade, I'd rather find a problem on a small group than on the whole user base.
 
 ---
 
-## Part 2 — If soft, define the four elements
+## Part 2 — If minimal, define the five elements
 
 - **Audience:** a random 10% of active users, controlled with a feature flag.
+- **Promotion level:** no announcement to this cohort beyond the summary simply appearing; quiet enough to test the behaviour without setting expectations.
 - **Success metric:** lapsing users who see the summary come back the following week, without the AI message saying anything it shouldn't.
 - **Expansion criteria:** widen to 30% after two weeks if the return rate holds above target and the message trips no guardrails in production.
 - **Rollback trigger:** if the AI message violates a guardrail in production (shaming a user, inventing a number), pull the AI message and fall back to a plain templated line while it's fixed. The summary keeps working; only the risky part comes out.
@@ -48,8 +49,6 @@ radar-beta
 | Support | Ready to field confusion or complaints; has been trained on the feature and has talking-points for user tickets that come in |
 | Engineering | Fully tested feature, will release and monitor AI call use |
 | Go/no-go call | Product manager has call and is watching return-rate metric |
-
----
 
 ---
 
@@ -73,7 +72,7 @@ I asked an AI tool to draft launch copy for the summary.
 ## Acceptance criteria
 
 - [x] The three strategies are plotted on a radar, and the chosen strategy is justified against the feature's risk and novelty using it
-- [x] If a soft launch, audience, success metric, expansion gate, and rollback trigger are all defined with real thresholds
+- [x] If a minimal launch, audience, promotion level, success metric, expansion criteria, and rollback trigger are all defined with real thresholds
 - [x] Cross-functional owners are named, with a readiness definition for each
 - [x] Every public claim in the launch copy is checked and sourced, with any regulatory risk flagged
 - [x] The AI section names one claim that needed verifying or softening, with reasoning

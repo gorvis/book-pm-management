@@ -14,8 +14,8 @@ radar-beta
     title Launch Strategies Compared
     axis reach["Reach"], promo["Promotion"], speed["Speed"]
     axis learn["Learning"], safety["Containment"]
-    curve soft["Soft"]{2, 2, 2, 5, 5}
-    curve minimal["Minimal"]{5, 1, 5, 1, 2}
+    curve soft["Soft"]{1, 1, 2, 5, 5}
+    curve minimal["Minimal"]{3, 3, 3, 3, 3}
     curve full["Full"]{5, 5, 5, 1, 1}
     max 5
     showLegend true
@@ -31,11 +31,11 @@ Each spoke is one characteristic of a launch, scored from the centre (low) to th
 - **Learning:** how much you get to learn before the whole audience is exposed.
 - **Containment:** how small the blast radius stays if something goes wrong.
 
-**Soft launch** stretches toward learning and containment, and stays low on reach, speed, and promotion. That's the cautious, de-risking shape toward the left. Only a few people at first, lots of room to learn, easy to pull back.
+**Soft launch**. The product or feature just appears, with little or no announcement. No campaign, only a small coordinated push.
 
-**Full launch** is the near-mirror image stretching to the right. It's high on reach, promotion, and speed, low on learning and containment. Everyone gets it, loudly and fast, with little protection if it's wrong.
+**Full launch**. The opposite end: a coordinated, high-visibility release across multiple teams, marketing, support, sales, sometimes PR, timed for maximum reach and attention.
 
-**Minimal launch** is wide and fast like a full launch, but quiet, and just as low on learning and containment. Everyone gets it with no fanfare.
+**Minimal launch**. In between soft and full. It can mean a staged release to a limited audience that widens over time, or a full release with reduced promotion. Either way, less exposure than a full launch, more than a soft one. 
 
 
 *Note: the scores here are illustrative, your team should score on each point. Remember the diagram doesn't decide your launch strategy, you do. This is designed to give you visual direction when considering a launch approach.*

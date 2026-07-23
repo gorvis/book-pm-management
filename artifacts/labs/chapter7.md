@@ -22,14 +22,14 @@ radar-beta
     title Launch Strategies for [your feature]
     axis reach["Reach"], promo["Promotion"], speed["Speed"]
     axis learn["Learning"], safety["Containment"]
-    curve soft["Soft"]{2, 2, 2, 5, 5}
-    curve minimal["Minimal"]{5, 1, 5, 1, 2}
+    curve soft["Soft"]{1, 1, 2, 5, 5}
+    curve minimal["Minimal"]{3, 3, 3, 3, 3}
     curve full["Full"]{5, 5, 5, 1, 1}
     max 5
     showLegend true
 ```
 
-> **How to edit this chart:** Each strategy is a `curve` line with five numbers in `{ }`, one per axis, in this order: Reach, Promotion, Speed, Learning, Containment. Each is scored 0 (low) to 5 (high). For example, `curve soft["Soft"]{2, 2, 2, 5, 5}` means soft launch is low on the first three and high on the last two. Change the numbers to match how you'd score each strategy for *your* feature. If your feature changes the picture, say a soft launch that still needs some promotion, adjust the relevant number.
+> **How to edit this chart:** Each strategy is a `curve` line with five numbers in `{ }`, one per axis, in this order: Reach, Promotion, Speed, Learning, Containment. Each is scored 0 (low) to 5 (high). For example, `curve soft["Soft"]{1, 1, 2, 5, 5}` means soft launch is low on the first three and high on the last two. Change the numbers to match how you'd score each strategy for *your* feature. If your feature changes the picture, say a soft launch that still needs some promotion, adjust the relevant number.
 
 **Your chosen strategy:** _[soft / minimal / full]_
 
@@ -37,11 +37,12 @@ radar-beta
 
 ---
 
-## Part 2 — If soft, define the four elements
+## Part 2 — If minimal, define the five elements
 
-If you chose a soft launch (and for anything with AI, you probably should), define all four. Both thresholds need real numbers or clear conditions, not "if it goes well."
+If you chose a minimal launch (and for anything with AI, you probably should), define all five. Thresholds need real numbers or clear conditions, not "if it goes well."
 
 - **Audience:** who gets it first?
+- **Promotion level:** How much do we promote it?
 - **Success metric:** what are you watching?
 - **Expansion criteria:** what result tells you it's safe to widen?
 - **Rollback trigger:** what result tells you to pull back?
@@ -87,7 +88,7 @@ Use an AI tool to draft launch copy or a set of FAQs for your feature. Then audi
 ## Acceptance criteria
 
 - [ ] The three strategies are plotted on a radar, and the chosen strategy is justified against the feature's risk and novelty using it
-- [ ] If a soft launch, audience, success metric, expansion gate, and rollback trigger are all defined with real thresholds
+- [ ] If a minimal launch, audience, promotion level, success metric, expansion criteria, and rollback trigger are all defined with real thresholds
 - [ ] Cross-functional owners are named, with a readiness definition for each
 - [ ] Every public claim in the launch copy is checked and sourced, with any regulatory risk flagged
 - [ ] The AI section names one claim that needed verifying or softening, with reasoning
