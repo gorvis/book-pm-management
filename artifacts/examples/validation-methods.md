@@ -11,9 +11,8 @@ flowchart TB
     end
     subgraph S["Solution risk — does it work?"]
         direction TB
-        S1["Smoke test"]
-        S2["A/B test"]
-        S3["Prototype test"]
+        S1["A/B test"]
+        S2["Prototype test"]
     end
     subgraph E["Experience risk — does it feel right?"]
         direction TB
@@ -41,7 +40,5 @@ Diary study ask a small group to log their behaviour or reactions over days or w
 **Fake-door test**: advertise a feature that doesn't exist yet (a button, a landing page) and measure who clicks. Tests demand before you build anything. (Problem risk.)
 
 **Prototype test**: put a mockup or working prototype in front of users and watch them use it. Tests usability and reaction before full engineering investment. (Solution or experience risk.)
-
-**Smoke test**: a minimal, often manual version of a feature, released to see if anyone uses it. Tests whether the solution gets picked up at all. (Solution risk.)
 
 **Wizard-of-Oz test**: a real-looking front end with a human faking the technology behind it. Tests whether the experience is valuable before you automate it. (Experience risk.)
