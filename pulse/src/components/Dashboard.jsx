@@ -57,6 +57,26 @@ export default function Dashboard({ entries, onQuickAdd, onQuickWater }) {
 
   return (
     <Box sx={{ maxWidth: 900, mx: 'auto', px: 2, py: 3 }}>
+      {/* Welcome message */}
+      <Box sx={{ mb: 3 }}>
+        <Typography
+          variant="h5"
+          sx={{
+            fontSize: '1.2rem',
+            mb: 0.5,
+          }}
+        >
+          Welcome back
+        </Typography>
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{ lineHeight: 1.5 }}
+        >
+          Here's your wellness snapshot for today. Log a meal, a walk, some water, or last night's sleep to keep your streak going.
+        </Typography>
+      </Box>
+
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
         <Typography variant="h5" sx={{ fontSize: '1.2rem' }}>
           Today
