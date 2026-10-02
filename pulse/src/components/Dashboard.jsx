@@ -1,18 +1,18 @@
 import React, { useMemo } from 'react';
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import MetricCard from './MetricCard';
 
-const METRIC_TYPES = ['food', 'steps', 'water', 'sleep'];
+const METRIC_TYPES = ['food', 'steps', 'water', 'sleep', 'gym'];
 
 /**
- * Dashboard screen: four metric cards showing today's totals with mini trends,
+ * Dashboard screen: five metric cards showing today's totals with mini trends,
  * plus quick-add shortcuts.
  */
-export default function Dashboard({ entries, onQuickAdd, onQuickWater }) {
+export default function Dashboard({ entries, onQuickAdd, onQuickWater, onQuickGym }) {
   // Today's date string for filtering
   const todayStr = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
 
@@ -77,35 +77,52 @@ export default function Dashboard({ entries, onQuickAdd, onQuickWater }) {
         </Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3, flexWrap: 'wrap', gap: 1 }}>
         <Typography variant="h5" sx={{ fontSize: '1.2rem' }}>
           Today
         </Typography>
-        <Button
-          variant="outlined"
-          size="small"
-          startIcon={<WaterDropIcon />}
-          onClick={onQuickWater}
-          id="quick-water-button"
-          sx={{ fontSize: '0.75rem' }}
-        >
-          +250 ml
-        </Button>
+        <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+          <Button
+            variant="outlined"
+            size="small"
+            startIcon={<FitnessCenterIcon />}
+            onClick={onQuickGym}
+            id="quick-gym-button"
+            sx={{ fontSize: '0.75rem' }}
+          >
+            Gym check-in
+          </Button>
+          <Button
+            variant="outlined"
+            size="small"
+            startIcon={<WaterDropIcon />}
+            onClick={onQuickWater}
+            id="quick-water-button"
+            sx={{ fontSize: '0.75rem' }}
+          >
+            +250 ml
+          </Button>
+        </Box>
       </Box>
 
-      {/* Metric cards in a 2×2 grid */}
-      <Grid container spacing={2}>
+      {/* Metric cards — flex layout adapts to 5 cards */}
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
         {metrics.map((m) => (
-          <Grid size={{ xs: 6, sm: 6, md: 3 }} key={m.type}>
+          <Box
+            key={m.type}
+            sx={{
+              flex: { xs: '1 1 calc(50% - 8px)', sm: '1 1 calc(33.333% - 11px)', md: '1 1 calc(20% - 13px)' },
+            }}
+          >
             <MetricCard
               type={m.type}
               todayTotal={m.todayTotal}
               trendData={m.trendData}
               onQuickAdd={() => onQuickAdd(m.type)}
             />
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 }

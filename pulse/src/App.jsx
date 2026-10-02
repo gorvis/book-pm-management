@@ -59,6 +59,17 @@ export default function App() {
     });
   }, [add]);
 
+  // Quick gym check-in (default 60 min)
+  const handleQuickGym = useCallback(() => {
+    add({
+      type: 'gym',
+      value: 60,
+      unit: 'minutes',
+      note: 'Gym check-in',
+      timestamp: new Date().toISOString(),
+    });
+  }, [add]);
+
   // Edit entry: switch to Log view with the entry pre-filled
   const handleEdit = useCallback((entry) => {
     setEditEntry(entry);
@@ -105,6 +116,7 @@ export default function App() {
             entries={entries}
             onQuickAdd={handleQuickAdd}
             onQuickWater={handleQuickWater}
+            onQuickGym={handleQuickGym}
           />
         )}
         {view === 1 && (
